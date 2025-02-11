@@ -4,6 +4,22 @@
  * @version 2.0
  */
 
+//=======================================================================
+//Registro do service worker
+
+// se o navegador de internet suportar esse recurso
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => {
+            console.log("service worker registrado")
+
+        })
+}
+
+
+//==================================================================
+
 function calcular() {
     //capturar os valores das caixas de input
     let gasolina = document.getElementById('gasolina').value
@@ -12,7 +28,7 @@ function calcular() {
     let kmlEtanol = document.getElementById('kmEtanol').value
     //console.log(gasolina)
     //console.log(etanol)
-   //console.log(kmlGasolina)
+    //console.log(kmlGasolina)
     //console.log(kmlEtanol)
 
 
@@ -20,7 +36,7 @@ function calcular() {
     if (etanol < (kmlEtanol / kmlGasolina) * gasolina) {
         document.getElementById('status').src = "img/etanol.png"
     } else {
-        document.getElementById('status').src = "img/gasolina.png" 
+        document.getElementById('status').src = "img/gasolina.png"
     }
 
 }
