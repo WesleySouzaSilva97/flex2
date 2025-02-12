@@ -2,7 +2,7 @@
     "name": "Gasollina ou Etanol?",
     "short_name": "Flex",
     "description": "aplicativo para verificar o combustível mais vantajoso para abastecer em veículos Flex",
-    "start_url": "/",
+    "start_url": "/flex2/",
     "scope": "/",
     "display": "standalone",
     "orientation": "portrait-primary",
